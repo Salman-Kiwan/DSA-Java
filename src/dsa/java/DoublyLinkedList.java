@@ -121,6 +121,20 @@ public class DoublyLinkedList <T> implements Iterable <T> {
             return data;
         }        
     }
+    public T peekFirst(){
+        if(head == null) return null;
+        return head.data;
+    }
+    public T peekLast(){
+        if(head == null) return null;
+        return tail.data;
+    }
+    public int size(){
+        return size;
+    }
+    public boolean isEmpty (){
+    return this.size() == 0;
+}
     @Override
     public java.util.Iterator<T> iterator() {
         return new java.util.Iterator<T>() {
