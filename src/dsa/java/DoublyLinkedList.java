@@ -107,6 +107,20 @@ public class DoublyLinkedList <T> implements Iterable <T> {
         
         return null;
     }
+    public T removeLast(){
+        if(head == null) return null;
+        if(head == tail){
+            T data = head.data;
+            this.clear();
+            return data;
+        } else {
+            T data = tail.data;
+            tail = tail.getPrev();
+            tail.setNext(null);
+            size--;
+            return data;
+        }        
+    }
     @Override
     public java.util.Iterator<T> iterator() {
         return new java.util.Iterator<T>() {
