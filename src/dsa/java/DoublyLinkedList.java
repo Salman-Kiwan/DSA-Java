@@ -92,6 +92,7 @@ public class DoublyLinkedList <T> implements Iterable <T> {
         return null;
         }
     public T removeFirst(){
+        if(head == null) return null;
         if(head == tail){
             T data = head.data;
             this.clear();
